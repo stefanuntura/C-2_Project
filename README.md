@@ -16,7 +16,7 @@
 </ul>
 <h3>Feature branch</h3>
 <ul>
-  <li>Name of branch must start with "DEV-1: Menu button". Example name: "DEV"</li>
+  <li>Name of branch must start with "DEV-". Example name: "DEV-1: Menu button"</li>
 </ul>
 <h3>Documentation branch</h3>
 <ul>
