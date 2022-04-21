@@ -4,7 +4,7 @@
 
 <h3>Main branch:</h3>
 <ul>
-  <li>Production product with no buggs and erorrs</li>
+  <li>Production product with no bugs and errors</li>
   <li>Based on pull requests from "Development branch"</li>
   <li>Github owner approves the pull requests to the main branch</li>
 </ul>
@@ -21,4 +21,13 @@
 <h3>Documentation branch</h3>
 <ul>
   <li>This branch contains all of the necessary documentation like the start document and the ERD.</li>
+</ul>
+
+<h1>Commit rules:</h1>
+<ul>
+  <li>Write down relevant commit titles and messages</li>
+  <li>No swear words</li>
+  <li>Commit messages should start with a verb in present tense, example:
+    "Add button on menu page"
+  </li>
 </ul>
