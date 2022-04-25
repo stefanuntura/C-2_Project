@@ -101,3 +101,7 @@ Casual Game Dev (2020, February 2nd) <i>MonoGame C# RPG Tutorial 01: Page Manage
 
 Challacade (2021, July 8th)<i> [2021 Update!] Make Games with Monogame - Installation and Development Fundamentals. </i>[Video] Youtube. Retrieved on April 21st, 2022 from https://www.youtube.com/watch?v=sPH-sNTSrhw
 
+Tutorials | MonoGame Documentation. (n.d.). Docs.monogame.net. Retrieved April 25, 2022, from https://docs.monogame.net/articles/tutorials.html
+
+‌
+
