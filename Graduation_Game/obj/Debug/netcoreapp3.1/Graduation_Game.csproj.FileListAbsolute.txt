@@ -21,3 +21,7 @@ C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.pdb
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.genruntimeconfig.cache
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.csprojAssemblyReference.cache
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\player.xnb
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\caveFloorFull.xnb
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\playerL.xnb
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\timerFont.xnb

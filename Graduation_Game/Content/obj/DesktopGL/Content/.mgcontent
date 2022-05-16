@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/caveFloorFull.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/player.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/playerL.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/timerFont.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
