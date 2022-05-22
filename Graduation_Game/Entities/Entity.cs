@@ -10,6 +10,11 @@ namespace Graduation_Game.Entities
     {
         int DrawOder { get; }
 
+        double Health { get; }
+        double Speed { get; }
+        double Gravity { get; }
+        double Damage { get; }
+
         void Update(GameTime gameTime);
 
         void Draw(SpriteBatch spriteBatch, GameTime gameTime);
