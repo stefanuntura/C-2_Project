@@ -10,8 +10,6 @@ namespace Graduation_Game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private Boss boss;
-        private Texture2D bossLevelOneSpriteSheet;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -29,9 +27,6 @@ namespace Graduation_Game
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            bossLevelOneSpriteSheet = Content.Load<Texture2D>("Bosses/BossLevelOneIdle");
-            boss = new Boss(bossLevelOneSpriteSheet, new Vector2(20, 20));
 
             // TODO: use this.Content to load your game content here
         }
@@ -51,9 +46,6 @@ namespace Graduation_Game
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            _spriteBatch.Begin();
-            boss.Draw(_spriteBatch, gameTime);
-            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

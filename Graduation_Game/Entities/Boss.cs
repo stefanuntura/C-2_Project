@@ -7,8 +7,7 @@ using Graduation_Game.Graphics;
 
 namespace Graduation_Game.Entities
 {
-    //{TO DO: Make this Boss class abstract}
-    public class Boss : Entity
+    public abstract class Boss : Entity
     {
         public Sprite Sprite { get; private set; }
         public EntityState State { get; private set; }
