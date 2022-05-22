@@ -44,3 +44,4 @@ C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp
 C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.dll
 C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.pdb
 C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\obj\Debug\netcoreapp3.1\Graduation_Game.genruntimeconfig.cache
+C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\Bosses\BossLevelOneIdle.xnb

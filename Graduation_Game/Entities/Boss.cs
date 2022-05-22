@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Text;
 using Graduation_Game.Graphics;
 
-namespace Graduation_Game.Entities.Bosses
+namespace Graduation_Game.Entities
 {
-    public abstract class Boss : Entity
+    public class Boss : Entity
     {
         public Sprite Sprite { get; private set; }
         public EntityState State { get; private set; }
