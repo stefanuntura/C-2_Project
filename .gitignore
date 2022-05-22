@@ -1,0 +1,11 @@
+
+Graduation_Game/.vs/Graduation_Game/v16/.suo
+Graduation_Game/bin/Debug/netcoreapp3.1/Graduation_Game.dll
+Graduation_Game/bin/Debug/netcoreapp3.1/Graduation_Game.pdb
+Graduation_Game/Content/obj/DesktopGL/Content/.mgstats
+Graduation_Game/Content/obj/DesktopGL/Content/Bosses/BossLevelOneIdle.mgcontent
+Graduation_Game/obj/Debug/netcoreapp3.1/Graduation_Game.dll
+Graduation_Game/obj/Debug/netcoreapp3.1/Graduation_Game.pdb
+*.mgcontent
+*.dll
+*.pdb
