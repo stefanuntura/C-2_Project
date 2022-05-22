@@ -27,7 +27,8 @@
 <ul>
   <li>Write down relevant commit titles and messages</li>
   <li>No swear words</li>
-  <li>Commit messages should start with a verb in present tense, example:
+  <li>Commit messages should start with *DEV-*, example: "DEV-1: Add Player class"</li>
+  <li>Commit messages and description should start with a verb in present tense, example:
     "Add button on menu page"
   </li>
 </ul>
