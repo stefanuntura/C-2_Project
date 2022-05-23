@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Graduation_Game.Entities;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
