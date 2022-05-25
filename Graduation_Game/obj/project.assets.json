@@ -174,25 +174,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SDR-1\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\linea\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SDR-1\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\Graduation_Game.csproj",
+      "projectUniqueName": "C:\\Users\\linea\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\Graduation_Game.csproj",
       "projectName": "Graduation_Game",
-      "projectPath": "C:\\Users\\SDR-1\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\Graduation_Game.csproj",
-      "packagesPath": "C:\\Users\\SDR-1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SDR-1\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\obj\\",
+      "projectPath": "C:\\Users\\linea\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\Graduation_Game.csproj",
+      "packagesPath": "C:\\Users\\linea\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\linea\\Documents\\GitHub\\C-2_Project\\Graduation_Game\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SDR-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\linea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -203,6 +198,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -214,6 +210,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
@@ -234,18 +231,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.2, 3.1.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

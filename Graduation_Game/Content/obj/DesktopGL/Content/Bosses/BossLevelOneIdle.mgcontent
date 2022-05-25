@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/SDR-1/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</SourceFile>
-  <SourceTime>2022-05-22T22:47:44.6257266+02:00</SourceTime>
-  <DestFile>C:/Users/SDR-1/Documents/GitHub/C-2_Project/Graduation_Game/Content/bin/DesktopGL/Content/Bosses/BossLevelOneIdle.xnb</DestFile>
-  <DestTime>2022-05-22T22:48:33.2116418+02:00</DestTime>
+  <SourceFile>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</SourceFile>
+  <SourceTime>2022-05-25T21:53:07.1412207+02:00</SourceTime>
+  <DestFile>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/bin/DesktopGL/Content/Bosses/BossLevelOneIdle.xnb</DestFile>
+  <DestTime>2022-05-25T21:53:55.826903+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
