@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Graduation_Game.Graphics
@@ -19,7 +16,9 @@ namespace Graduation_Game.Graphics
 
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
+            spriteBatch.Begin();
             spriteBatch.Draw(Texture, position, TintColor);
+            spriteBatch.End();
         }
     }
 }

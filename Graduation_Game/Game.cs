@@ -1,7 +1,7 @@
-﻿using Graduation_Game.Entities;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Graduation_Game.Entities;
 
 namespace Graduation_Game
 {
@@ -9,6 +9,8 @@ namespace Graduation_Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        private Player _player;
 
         public Game1()
         {
@@ -28,6 +30,7 @@ namespace Graduation_Game
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            _player = new Player(this, new Vector2(200, 200));
             // TODO: use this.Content to load your game content here
         }
 
@@ -35,6 +38,8 @@ namespace Graduation_Game
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            _player.Update(gameTime);
 
             // TODO: Add your update logic here
 
@@ -46,6 +51,8 @@ namespace Graduation_Game
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+            _player.Draw(_spriteBatch, gameTime);
 
             base.Draw(gameTime);
         }

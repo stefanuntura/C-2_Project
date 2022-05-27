@@ -1,37 +1,80 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Graduation_Game.Graphics;
 
 namespace Graduation_Game.Entities
 {
-    public abstract class Player : Entity
+    public class Player : Entity
     {
-        public Sprite Sprite { get; private set; }
-        public EntityState State { get; private set; }
-        public Vector2 Position { get; set; }
-        public double Health { get; set; }
-        public double Speed { get; set; }
-        public double Gravity { get; set; }
-        public double Damage { get; set; }
-        public int DrawOder { get; set; }
 
-        public Player(Texture2D spriteSheet, Vector2 position)
-        {
-            Sprite = new Sprite(spriteSheet);
-            Position = position;
-        }
+        private double timer;
+        InputController controller;
+        Dictionary<String, Sprite> animations;
+        float dt;
 
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        public Player(Game game, Vector2 position) : base(game, position)
         {
-            Sprite.Draw(spriteBatch, this.Position);
+            animations = new Dictionary<String, Sprite>();
+            LoadContent(game);
+            Sprite = animations["walk_right"];
+            Speed = 180;
+            controller = new InputController(this);
         }
 
         public void Update(GameTime gameTime)
         {
+            // jumping-timer
+            timer -= gameTime.ElapsedGameTime.TotalMilliseconds;
+            // delta time
+            dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            // update velocity on Y axis
+            Gravity = Gravity < Speed * 1.5 ? Gravity + 7.5 : Gravity;
+
+            controller.handleInput();
+
+            float newY = Position.Y + Gravity * dt < 400 ? Position.Y + (float)Gravity * dt : 400;
+            Position = new Vector2(Position.X, newY);
+        }
+
+        public void moveRight()
+        {
+            Sprite = animations["walk_right"];
+            if (Position.X < 1265)
+            {
+                Position = new Vector2(Position.X + (float)Speed * dt, Position.Y);
+            }
+        }
+
+        public void moveLeft()
+        {
+            Sprite = animations["walk_left"];
+            if (Position.X > 0)
+            {
+                Position = new Vector2(Position.X - (float)Speed * dt, Position.Y);
+            }
+        }
+
+        public void moveUp()
+        {
+            if (timer <= 0)
+            {
+                Gravity = -Speed * 1.5f;
+                timer = 1200;
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        {
+            Sprite.Draw(spriteBatch, Position);
+        }
+
+        public void LoadContent(Game game)
+        {
+            animations["walk_right"] = new Sprite(game.Content.Load<Texture2D>("Player/player"));
+            animations["walk_left"] = new Sprite(game.Content.Load<Texture2D>("Player/playerL"));
         }
     }
 }
