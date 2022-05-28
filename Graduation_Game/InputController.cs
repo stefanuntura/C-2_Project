@@ -6,7 +6,7 @@ namespace Graduation_Game
     class InputController
     {
         private Player _player;
-        KeyboardState _kState;
+        private KeyboardState _kState;
 
         public InputController(Player player)
         {
