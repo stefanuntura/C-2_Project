@@ -18,10 +18,9 @@ namespace Graduation_Game.Entities
         public double Damage { get; set; }
         public int DrawOder { get; set; }
 
-        public Boss(Texture2D spriteSheet, Vector2 position)
+        public Boss(Texture2D spriteSheet, Vector2 position, Game game) : base(game, position)
         {
             Sprite = new Sprite(spriteSheet);
-            Position = position;
         }
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)

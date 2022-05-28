@@ -4,9 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/SDR-1/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/player.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/playerL.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
