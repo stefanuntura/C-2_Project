@@ -39,12 +39,14 @@ namespace Graduation_Game
 
             _player = new Player(this, new Vector2(0, 0));
             _map = new Map();
-            _map.addBox(new Box(this, new Vector2(100, 10), new Vector2(100, 100)));
-            _map.addBox(new Box(this, new Vector2(80, 10), new Vector2(100, 200)));
-            _map.addBox(new Box(this, new Vector2(50, 10), new Vector2(100, 300)));
-            _map.addBox(new Box(this, new Vector2(50, 20), new Vector2(300, 350)));
-            _map.addBox(new Box(this, new Vector2(50, 20), new Vector2(200, 380)));
-            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(400, 400)));
+            _map.addBox(new Box(this, new Vector2(800, 40), new Vector2(0, 440), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(20, 700), new Vector2(780, 0), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(40, 400), new Vector2(740, 380), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(50, 400), new Vector2(690, 405), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(100, 300), Color.DarkGray));
+            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(300, 350), Color.DarkGray));
+            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(200, 380), Color.DarkGray));
+            _map.addBox(new Box(this, new Vector2(60, 15), new Vector2(440, 400), Color.DarkGray));
             _map.LoadContent(this);
 
             // _tiledMap = Content.Load<TiledMap>("Map/test");

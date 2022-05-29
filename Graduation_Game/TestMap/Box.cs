@@ -9,12 +9,14 @@ namespace Graduation_Game.TestMap
     {
         public Vector2 Dimensions { get; set; }
         public Vector2 Position { get; set; }
+        public Color BoxColour { get; set; }
         public Texture2D Texture;
 
-        public Box(Game game, Vector2 dimensions, Vector2 position) : base(game)
+        public Box(Game game, Vector2 dimensions, Vector2 position, Color color) : base(game)
         {
             Dimensions = dimensions;
             Position = position;
+            BoxColour = color;
         }
 
         public void LoadContent(Game game)
@@ -26,7 +28,7 @@ namespace Graduation_Game.TestMap
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(Texture, new Rectangle((int)Position.X, (int)Position.Y, (int)Dimensions.X, (int)Dimensions.Y), Color.Chocolate);
+            spriteBatch.Draw(Texture, new Rectangle((int)Position.X, (int)Position.Y, (int)Dimensions.X, (int)Dimensions.Y), BoxColour);
             spriteBatch.End();
         }
     }
