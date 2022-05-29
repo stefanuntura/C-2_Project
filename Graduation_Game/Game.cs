@@ -13,8 +13,8 @@ namespace Graduation_Game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        TiledMap _tiledMap;
-        TiledMapRenderer _tiledMapRenderer;
+        //TiledMap _tiledMap;
+        //TiledMapRenderer _tiledMapRenderer;
 
         private Player _player;
         private Map _map;
