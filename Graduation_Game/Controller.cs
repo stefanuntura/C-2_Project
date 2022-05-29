@@ -11,7 +11,7 @@ namespace Graduation_Game
 {
     class Controller
     {
-        Player player;
+        private Player player;
 
         public Controller(Player player)
         {

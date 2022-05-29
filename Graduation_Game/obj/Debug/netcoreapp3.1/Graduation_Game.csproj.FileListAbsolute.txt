@@ -48,3 +48,8 @@ C:\Users\SDR-1\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\Bosses\BossLevelOneIdle.xnb
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\Player\player.xnb
 C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Content\Player\playerL.xnb
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\linea\Documents\GitHub\C-2_Project\Graduation_Game\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

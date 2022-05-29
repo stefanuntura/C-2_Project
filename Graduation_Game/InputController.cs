@@ -1,5 +1,6 @@
 ﻿using Graduation_Game.Entities;
 using Microsoft.Xna.Framework.Input;
+using Graduation_Game.TestMap;
 
 namespace Graduation_Game
 {
@@ -13,7 +14,7 @@ namespace Graduation_Game
             _player = player;
         }
 
-        public void handleInput()
+        public void handleInput(Map map)
         {
             _kState = Keyboard.GetState(); ;
             Keys[] keys = _kState.GetPressedKeys();
@@ -23,13 +24,13 @@ namespace Graduation_Game
                 switch (key)
                 {
                     case Keys.Right:
-                        _player.moveRight();
+                        _player.moveRight(map);
                         break;
                     case Keys.Left:
-                        _player.moveLeft();
+                        _player.moveLeft(map);
                         break;
                     case Keys.Up:
-                        _player.moveUp();
+                        _player.jump();
                         break;
                 }
             }
