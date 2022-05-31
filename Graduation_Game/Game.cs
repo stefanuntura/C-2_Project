@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Graduation_Game.States;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Graduation_Game.Entities;
-using Graduation_Game.TestMap;
-using MonoGame.Extended.Tiled;
-using MonoGame.Extended.Tiled.Renderers;
 
 namespace Graduation_Game
 {
@@ -13,22 +9,25 @@ namespace Graduation_Game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        //TiledMap _tiledMap;
-        //TiledMapRenderer _tiledMapRenderer;
+        private State _currentState;
+        private State _nextState;
 
-        private Player _player;
-        private Map _map;
+        public void ChangeState(State state)
+        {
+            _nextState = state;
+        }
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            //_graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
-            IsMouseVisible = false;
+            IsMouseVisible = true;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -37,45 +36,29 @@ namespace Graduation_Game
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _player = new Player(this, new Vector2(0, 0));
-            _map = new Map();
-            _map.addBox(new Box(this, new Vector2(800, 40), new Vector2(0, 440), Color.DarkSlateGray));
-            _map.addBox(new Box(this, new Vector2(20, 700), new Vector2(780, 0), Color.DarkSlateGray));
-            _map.addBox(new Box(this, new Vector2(40, 400), new Vector2(740, 380), Color.DarkSlateGray));
-            _map.addBox(new Box(this, new Vector2(50, 400), new Vector2(690, 405), Color.DarkSlateGray));
-            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(100, 300), Color.DarkGray));
-            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(300, 350), Color.DarkGray));
-            _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(200, 380), Color.DarkGray));
-            _map.addBox(new Box(this, new Vector2(60, 15), new Vector2(440, 400), Color.DarkGray));
-            _map.LoadContent(this);
-
-            // _tiledMap = Content.Load<TiledMap>("Map/test");
-            // _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
-            // TODO: use this.Content to load your game content here
+            _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            //    Exit();
+            if(_nextState != null)
+            {
+                _currentState = _nextState;
+                _nextState = null;
+            }
 
-            //_tiledMapRenderer.Update(gameTime);
-            _player.Update(gameTime, _map);
-
-            // TODO: Add your update logic here
+            _currentState.Update(gameTime);
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGray);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
-
-            //_tiledMapRenderer.Draw();
-            _player.Draw(_spriteBatch, gameTime);
-            _map.Draw(_spriteBatch, gameTime);
+            _currentState.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);
         }
