@@ -39,8 +39,8 @@ namespace Graduation_Game
 
             _player = new Player(this, new Vector2(0, 0));
             _map = new Map();
-            _map.addBox(new Box(this, new Vector2(800, 40), new Vector2(0, 440), Color.DarkSlateGray));
-            _map.addBox(new Box(this, new Vector2(20, 700), new Vector2(780, 0), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(800, 100), new Vector2(0, 440), Color.DarkSlateGray));
+            _map.addBox(new Box(this, new Vector2(200, 700), new Vector2(780, 0), Color.DarkSlateGray));
             _map.addBox(new Box(this, new Vector2(40, 400), new Vector2(740, 380), Color.DarkSlateGray));
             _map.addBox(new Box(this, new Vector2(50, 400), new Vector2(690, 405), Color.DarkSlateGray));
             _map.addBox(new Box(this, new Vector2(50, 15), new Vector2(100, 300), Color.DarkGray));
