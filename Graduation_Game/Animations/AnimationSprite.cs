@@ -43,7 +43,7 @@ namespace Graduation_Game.Animations
         {
             Animations = animations;
             CurrentAnimation = Animations[startAnimation];
-            _animationManager = new AnimationManager(Animations.First().Value);
+            _animationManager = new AnimationManager(CurrentAnimation);
         }
 
         public AnimationSprite(Texture2D texture)
