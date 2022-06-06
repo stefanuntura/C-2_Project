@@ -23,13 +23,13 @@ namespace Graduation_Game
             {
                 switch (key)
                 {
-                    case Keys.Right:
+                    case Keys.D:
                         _player.moveRight(map);
                         break;
-                    case Keys.Left:
+                    case Keys.A:
                         _player.moveLeft(map);
                         break;
-                    case Keys.Up:
+                    case Keys.W:
                         _player.jump();
                         break;
                 }
