@@ -148,9 +148,11 @@ namespace Graduation_Game.Entities
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        public void Draw(SpriteBatch _spriteBatch, GameTime gameTime)
         {
-            Sprite.Draw(spriteBatch, Position);
+            
+            Sprite.Draw(_spriteBatch, Position);
+            
         }
 
         public void LoadContent(Game game)

@@ -59,14 +59,14 @@ namespace Graduation_Game.States
             _game.Exit();
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch _spriteBatch)
         {
-            spriteBatch.Begin();
+            _spriteBatch.Begin();
             
             foreach(var component in _components)
-                component.Draw(gameTime, spriteBatch);
+                component.Draw(gameTime, _spriteBatch);
 
-            spriteBatch.End();
+            _spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)

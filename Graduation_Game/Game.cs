@@ -1,6 +1,7 @@
 ﻿using Graduation_Game.States;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Graduation_Game
 {
@@ -56,8 +57,8 @@ namespace Graduation_Game
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            GraphicsDevice.Clear(Color.LightGray);
+           
             _currentState.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);

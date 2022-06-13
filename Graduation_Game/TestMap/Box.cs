@@ -27,9 +27,7 @@ namespace Graduation_Game.TestMap
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            spriteBatch.Begin();
             spriteBatch.Draw(Texture, new Rectangle((int)Position.X, (int)Position.Y, (int)Dimensions.X, (int)Dimensions.Y), BoxColour);
-            spriteBatch.End();
         }
     }
 }
