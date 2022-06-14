@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Graduation_Game.Graphics;
 using Graduation_Game.TestMap;
+using Graduation_Game.Animations;
 
 namespace Graduation_Game.Entities
 {
@@ -11,15 +12,14 @@ namespace Graduation_Game.Entities
     {
 
         private bool _canJump = false;
-        private InputController controller;
-        private Dictionary<String, Sprite> animations;
-        private float dt;
+        InputController controller;
+        AnimationSprite _animationSprite;
+        String _direction = "right";
+        float dt;
 
         public Player(Game game, Vector2 position) : base(game, position)
         {
-            animations = new Dictionary<String, Sprite>();
             LoadContent(game);
-            Sprite = animations["walk_right"];
             Speed = 180;
             controller = new InputController(this);
         }
@@ -29,13 +29,19 @@ namespace Graduation_Game.Entities
             // delta time
             dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            if (_canJump)
+                _animationSprite.SetActive(_direction == "right" ? "StandRight" : "StandLeft");
+
             controller.handleInput(map);
             moveY(map);
+            _animationSprite.Update(gameTime);
         }
 
         public void moveRight(Map map)
         {
-            Sprite = animations["walk_right"];
+            _animationSprite.SetActive("WalkRight");
+            _direction = "right";
+            changePlayerDimensions();
             if (Position.X < 1265)
             {
                 bool collision = false;
@@ -58,14 +64,16 @@ namespace Graduation_Game.Entities
                 }
                 else
                 {
-                    Position = new Vector2(collidedBox.Position.X - Sprite.Texture.Width - 1, Position.Y);
+                    Position = new Vector2(collidedBox.Position.X - Dimensions.X - 1, Position.Y);
                 }
             }
         }
 
         public void moveLeft(Map map)
         {
-            Sprite = animations["walk_left"];
+            _animationSprite.SetActive("WalkLeft");
+            _direction = "left";
+            changePlayerDimensions();
             if (Position.X > 0)
             {
                 bool collision = false;
@@ -95,47 +103,46 @@ namespace Graduation_Game.Entities
 
         public void moveY(Map map)
         {
-            Gravity = Gravity < Speed * 1.5 ? Gravity + 7.5 : Gravity;
+            float newY;
+            Gravity = Gravity < Speed * 1.5 ? Gravity + 10 : Gravity;
+            changePlayerDimensions();
 
-            if (Position.Y + Gravity * dt < 400)
+
+            bool collision = false;
+            Box collidedBox = null;
+            Vector2 newPos = new Vector2(Position.X, Position.Y + (float)Gravity * dt);
+
+            foreach (Box box in map.Boxes)
             {
-                bool collision = false;
-                Box collidedBox = null;
-                Vector2 newPos = new Vector2(Position.X, Position.Y + (float)Gravity * dt);
-
-                foreach (Box box in map.Boxes)
+                if (collided(box, newPos))
                 {
-                    if (collided(box, newPos))
-                    {
-                        collision = true;
-                        collidedBox = box;
-                        break;
-                    }
+                    collision = true;
+                    collidedBox = box;
+                    break;
                 }
+            }
 
-                if (!collision)
-                {
-                    Position = newPos;
-                    _canJump = false;
-                }
+            if (!collision)
+            {
+                Position = newPos;
+                if (Gravity > 0)
+                    _animationSprite.SetActive(_direction == "right" ? "DownRight" : "DownLeft");
                 else
-                {
-                    if (Gravity < 0)
-                    {
-                        Position = new Vector2(Position.X, collidedBox.Position.Y + collidedBox.Dimensions.Y + 1);
-                        Gravity = 0;
-                    }
-                    else
-                    {
-                        Position = new Vector2(Position.X, collidedBox.Position.Y - Sprite.Texture.Height - 1);
-                        _canJump = true;
-                    }
-                }
+                    _animationSprite.SetActive(_direction == "right" ? "UpRight" : "UpLeft");
             }
             else
             {
-                Position = new Vector2(Position.X, 400);
-                _canJump = true;
+                if (Gravity < 0)
+                {
+                    Position = new Vector2(Position.X, collidedBox.Position.Y + collidedBox.Dimensions.Y + 1);
+                    Gravity = 0;
+                    _animationSprite.SetActive(_direction == "right" ? "DownRight" : "DownLeft");
+                }
+                else
+                {
+                    Position = new Vector2(Position.X, collidedBox.Position.Y - Dimensions.Y - 1);
+                    _canJump = true;
+                }
             }
         }
 
@@ -143,22 +150,39 @@ namespace Graduation_Game.Entities
         {
             if (_canJump)
             {
-                Gravity = -Speed * 1.5f;
+                Gravity = -Speed * 1.7f;
                 _canJump = false;
             }
         }
 
         public void Draw(SpriteBatch _spriteBatch, GameTime gameTime)
         {
-            
-            Sprite.Draw(_spriteBatch, Position);
-            
+            //Sprite.Draw(spriteBatch, Position);
+            _animationSprite.Draw(spriteBatch, Position);
+
         }
 
         public void LoadContent(Game game)
         {
-            animations["walk_right"] = new Sprite(game.Content.Load<Texture2D>("Player/player"));
-            animations["walk_left"] = new Sprite(game.Content.Load<Texture2D>("Player/playerL"));
+            _animationSprite = new AnimationSprite(new Dictionary<string, Animation>()
+            {
+              { "WalkRight", new Animation(game.Content.Load<Texture2D>("Player/WalkRight"), 2) },
+              { "WalkLeft", new Animation(game.Content.Load<Texture2D>("Player/WalkLeft"), 2) },
+              { "StandRight", new Animation(game.Content.Load<Texture2D>("Player/player"), 1) },
+              { "StandLeft", new Animation(game.Content.Load<Texture2D>("Player/playerL"), 1) },
+              { "UpRight", new Animation(game.Content.Load<Texture2D>("Player/UpRight"), 1) },
+              { "UpLeft", new Animation(game.Content.Load<Texture2D>("Player/UpLeft"), 1) },
+              { "DownRight", new Animation(game.Content.Load<Texture2D>("Player/DownRight"), 1) },
+              { "DownLeft", new Animation(game.Content.Load<Texture2D>("Player/DownLeft"), 1) },
+            }, "StandRight");
+
+            changePlayerDimensions();
+        }
+
+        public void changePlayerDimensions()
+        {
+            Animation currAnim = _animationSprite.CurrentAnimation;
+            Dimensions = new Vector2(currAnim.FrameWidth, currAnim.FrameHeight);
         }
     }
 }

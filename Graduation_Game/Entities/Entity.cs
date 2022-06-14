@@ -23,9 +23,9 @@ namespace Graduation_Game.Entities
 
         public bool collided(Box box, Vector2 newPos)
         {
-            if (newPos.Y <= box.Position.Y + box.Dimensions.Y && newPos.Y + Sprite.Texture.Height >= box.Position.Y)
+            if (newPos.Y <= box.Position.Y + box.Dimensions.Y && newPos.Y + Dimensions.Y >= box.Position.Y)
             {
-                if (newPos.X <= box.Position.X + box.Dimensions.X && newPos.X + Sprite.Texture.Width >= box.Position.X)
+                if (newPos.X <= box.Position.X + box.Dimensions.X && newPos.X + Dimensions.X >= box.Position.X)
                 {
                     return true;
                 }

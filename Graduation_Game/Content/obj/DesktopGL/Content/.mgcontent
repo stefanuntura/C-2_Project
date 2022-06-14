@@ -8,9 +8,24 @@
     <File>C:/Users/josta/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</File>
     <File>C:/Users/josta/Documents/GitHub/C-2_Project/Graduation_Game/Content/Controls/button.png</File>
     <File>C:/Users/josta/Documents/GitHub/C-2_Project/Graduation_Game/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Bosses/BossLevelOneIdle.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/DownLeft.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/DownRight.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/player.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/playerL.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/UpLeft.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/UpRight.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/WalkLeft.png</File>
+    <File>C:/Users/linea/Documents/GitHub/C-2_Project/Graduation_Game/Content/Player/WalkRight.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Controls/GameTitle.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
